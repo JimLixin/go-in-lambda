@@ -25,6 +25,8 @@ func setupRouter() *gin.Engine {
 		c.JSON(http.StatusOK, gin.H{"message": "hello test completed successfully"})
 	})
 
+	r.GET("/logs", getLogs)
+
 	return r
 }
 
